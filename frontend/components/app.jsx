@@ -12,8 +12,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        
-        <TodoContainer>
+        <TodoContainer >
+          { this.props.state.todos.forEach }
       </div>
     );
   }
