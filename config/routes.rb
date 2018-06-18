@@ -7,9 +7,6 @@ Rails.application.routes.draw do
     # resources :thing, only: [:create, :destroy, :index, :show, :update] do
     #   resources :subthing
     # end
+    resources :todos, only: [:create, :destroy, :index, :show, :update]
   end
-
-  resources :values, only: [:create]
-  resources :result, only: [:show]
-
 end
