@@ -3,13 +3,14 @@ class TodosController < ApplicationController
   end
 
   def index
+    @todos = Todo.all
   end
 
   def show
   end
 
   def update
-  end 
+  end
 
   def destroy
   end
