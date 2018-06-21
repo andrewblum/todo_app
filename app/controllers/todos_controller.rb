@@ -1,5 +1,7 @@
 class TodosController < ApplicationController
   def create
+    @todo = Todo.new()
+    @Todo.save!
   end
 
   def index
