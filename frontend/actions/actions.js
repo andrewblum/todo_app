@@ -11,3 +11,15 @@ export const exampleAPIAction = (data) => dispatch => (
       dispatch(exampleAction(returnedData));
     })
 );
+
+export const addTodos = (data) => ({
+  type: 'ADDTODOS',
+  data
+});
+
+export const fetchTodos = () => dispatch => (
+  Util.getTodos()
+    .then(todos => {
+      dispatch(addTodos(todos));
+    })
+);
