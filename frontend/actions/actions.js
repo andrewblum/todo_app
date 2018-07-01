@@ -1,7 +1,10 @@
 import * as Util from '../util/utils.js';
+export const SOME_ACTION = 'SOME_ACTION';
+export const ADD_TODOS = 'ADD_TODOS';
+
 
 export const exampleAction = (data) => ({
-  type: 'someaction',
+  type: SOME_ACTION,
   data
 });
 
@@ -13,7 +16,7 @@ export const exampleAPIAction = (data) => dispatch => (
 );
 
 export const addTodos = (data) => ({
-  type: 'ADDTODOS',
+  type: ADD_TODOS,
   data
 });
 
