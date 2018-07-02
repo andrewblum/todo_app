@@ -5,3 +5,10 @@ export const exampleUtil = (somedata) => (
     data: {stuff: somedata}
   })
 );
+
+export const fetchTodos = () => (
+  $.ajax({
+    url: 'api/todos',
+    method: 'GET'
+  })
+);
