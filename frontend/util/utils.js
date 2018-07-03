@@ -20,3 +20,11 @@ export const createTodo = (data) => (
     data: {todo: data}
   })
 );
+
+export const updateTodo = (data) => (
+  $.ajax({
+    url: 'api/todos',
+    method: 'PUT',
+    data: {todo: data}
+  })
+);
