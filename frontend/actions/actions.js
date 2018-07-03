@@ -2,7 +2,6 @@ import * as Util from '../util/utils.js';
 export const SOME_ACTION = 'SOME_ACTION';
 export const ADD_TODOS = 'ADD_TODOS';
 
-
 export const exampleAction = (data) => ({
   type: SOME_ACTION,
   data
