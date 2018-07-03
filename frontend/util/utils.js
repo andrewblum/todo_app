@@ -12,3 +12,11 @@ export const fetchTodos = () => (
     method: 'GET'
   })
 );
+
+export const createTodo = (data) => (
+  $.ajax({
+    url: 'api/todos',
+    method: 'POST',
+    data: {todo: data}
+  })
+);
