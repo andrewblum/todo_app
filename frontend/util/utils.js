@@ -13,26 +13,26 @@ export const fetchTodos = () => (
   })
 );
 
-export const createTodo = (data) => (
+export const createTodo = (todo) => (
   $.ajax({
-    url: 'api/todos',
+    url: `api/todos/${todo.id}`,
     method: 'POST',
-    data: {todo: data}
+    data: {todo: todo}
   })
 );
 
-export const updateTodo = (data) => (
+export const updateTodo = (todo) => (
   $.ajax({
-    url: 'api/todos',
+    url: `api/todos/${todo.id}`,
     method: 'PUT',
-    data: {todo: data}
+    data: {todo: todo}
   })
 );
 
-export const deleteTodo = (data) => (
+export const deleteTodo = (todo) => (
   $.ajax({
     url: 'api/todos',
     method: 'DELETE',
-    data: {todo: data}
+    data: {todo: todo}
   })
 );
