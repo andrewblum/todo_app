@@ -28,3 +28,11 @@ export const updateTodo = (data) => (
     data: {todo: data}
   })
 );
+
+export const deleteTodo = (data) => (
+  $.ajax({
+    url: 'api/todos',
+    method: 'DELETE',
+    data: {todo: data}
+  })
+);
