@@ -1,8 +1,7 @@
 import * as Util from '../util/utils.js';
 export const SOME_ACTION = 'SOME_ACTION';
 export const ADD_TODOS = 'ADD_TODOS';
-export const UPDATE_TODO = 'UPDATE_TODO';
-
+export const ADD_TODO = 'ADD_TODO';
 
 export const exampleAction = (data) => ({
   type: SOME_ACTION,
@@ -28,7 +27,14 @@ export const fetchTodos = () => dispatch => (
     })
 );
 
-export const updateTodo = (data) => ({
-  type: UPDATE_TODO,
+export const addTodo = (data) => ({
+  type: ADD_TODO,
   data
 });
+
+export const updateTodo = () => dispatch => (
+  Util.updateTodo()
+    .then(todo => {
+      dispatch(addTodo(todo));
+    })
+);
