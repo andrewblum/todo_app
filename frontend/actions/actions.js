@@ -26,6 +26,13 @@ export const deleteTodo = (data) => ({
   data
 });
 
+export const removeTodo = (todo) => dispatch => (
+  Util.removeTodo(todo)
+    .then(returned_todo => {
+      dispatch(deleteTodo(todo));
+    })
+);
+
 export const fetchTodos = () => dispatch => (
   Util.getTodos()
     .then(todos => {
